@@ -7,20 +7,21 @@ html, body {
 
 html {
   font-size: 10px;
-
 }
+
 
 body {
   width: 70%;
   min-width: 800px;
   margin: 0 auto;
   background-color: #6091C3;
+
 }
 
 /* || typography */
 
 h1, h2, h3 {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Bebas Neue', cursive;
   color: #2a2a2a;
 }
 
@@ -60,7 +61,7 @@ p, li {
 }
 
 body > * {
-  background-color: red;
+  background-color: rgb(47, 184, 81);
   padding: 1%;
 }
 
@@ -74,10 +75,12 @@ h1 {
   text-transform: uppercase;
 }
 
+
 .header img {
   display: block;
   height: 60px;
   padding-top: 20.15px;
+
 }
 
 nav {
