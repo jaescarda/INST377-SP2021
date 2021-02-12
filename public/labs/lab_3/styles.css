@@ -1,10 +1,37 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
 
- .images li {
+.carousel {
+    width: 500px;
+    padding: 15px 15px;
+    border: 1px #CCC;
+    background: #eee;
+}
+
+.gallery {
+    overflow: hidden;
+}
+
+.gallery ul {
+    height: 130px;
+    width: 9999px;
+}
+
+ .gallery li {
     display: inline-block;
  }
+
+
+.carousel img {
+    width: 100px;
+    height: 100px;
+}
 
  body {
      display: block;
  }
+
+.arrow {
+    display: inline;
+    top: 60px;
+}
