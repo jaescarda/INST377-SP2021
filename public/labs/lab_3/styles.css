@@ -4,6 +4,11 @@
  body {
     padding: 10px;
     background-color: rgb(255, 215, 215);
+    align-items: center;
+    position: fixed;
+    left: 350px;
+    margin: 10px;
+
 }
 
 .carousel {
@@ -11,20 +16,22 @@
     width: 450px;
     padding: 10px 40px;
     border: 1px #CCC;   
-    background: #eee;
+    background: rgb(255, 247, 247);
+    margin: 10px 40px;
+    border-radius: 10px;
 }
 
 .carousel img {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     display: block;
 }
 
 .arrow {
     display: flex;
-    justify-content: space-between;
-    top: 80px;
+    top: 70px;
     position: absolute; 
+    border-radius: 5px;
 }
 
 .left {
@@ -37,13 +44,16 @@
 
 .gallery {
     width: 440px;
+    overflow: hidden;
 }
 
 .gallery ul {
     height: 130px;
-    width: 9999px;
+    width: 4000px;
     margin: 0;
-    padding: 10px 5px;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
     }
 
  .gallery li {
