@@ -8,7 +8,10 @@
     position: fixed;
     left: 350px;
     margin: 10px;
+}
 
+h1 {
+    text-align: center;
 }
 
 .carousel {
