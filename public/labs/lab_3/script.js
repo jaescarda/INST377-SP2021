@@ -1,7 +1,5 @@
 /* Put your javascript in here */
 let position = 0;
-let width = 130;
-let count = 3;
 const listOfImages = document.querySelector('ul');
 const listOfImageElems = document.querySelectorAll('li');
 const imageArray = Array.from(listOfImageElems);
@@ -21,7 +19,6 @@ function movePictureLeft() {
         console.log(element);
     })
 };
-
 
 function clickToMove() {
     const rightArrow = document.querySelector('#next')
