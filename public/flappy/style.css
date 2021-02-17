@@ -1,0 +1,28 @@
+.game-container {
+    width: 500px;
+    height: 500px;
+    /* this positions it based on parent container's position*/
+    position: absolute;
+}
+
+.sky {
+    background-color: lightblue;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+}
+
+.ground {
+    background-color: rgb(173, 151, 104);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 400px;
+}
+
+.bird {
+    background-color: yellow;
+    width: 50px;
+    height: 45px;
+    position: absolute;
+}
