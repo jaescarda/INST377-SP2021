@@ -3,6 +3,7 @@
     height: 550px;
     /* this positions it based on parent container's position*/
     position: absolute;
+    padding: 0px;
 }
 
 .sky {
@@ -17,12 +18,19 @@
     width: 500px;
     height: 100px;
     position: absolute;
-    top: 500px;
+    top: 460px;
 }
 
 .bird {
     background-color: yellow;
     width: 50px;
     height: 45px;
+    position: absolute;
+}
+
+.obstacle {
+    background-color: green;
+    width: 60px;
+    height: 300px;
     position: absolute;
 }
