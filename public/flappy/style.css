@@ -37,7 +37,7 @@ body {
 }
 
 .sky {
-    background-color: lightblue;
+    background-image: url('fb-game-background-crop.png');
     width: 500px;
     height: 550px;
     position: absolute;
@@ -45,7 +45,7 @@ body {
 
 .ground {
     background-color: rgb(173, 151, 104);
-    width: 500px;
+    width: 600px;
     height: 100px;
     position: absolute;
     top: 460px;
@@ -74,3 +74,16 @@ body {
     position: absolute;
 
 }
+
+.ground-moving {
+    position: absolute;
+    top: 450px;
+    height: 120px;
+    background-image: url('bottom-background.png');
+    background-repeat: repeat-x;
+    animation: slideright 100s infinite linear;
+    -webkit-animation: slideright 100s infinite linear;
+    width: 480px;
+    left: 90px;
+    z-index: +1;
+  }

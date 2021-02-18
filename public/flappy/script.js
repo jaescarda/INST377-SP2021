@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const bird = document.querySelector('.bird')
     const gameDisplay = document.querySelector('.game-container') 
-    const ground = document.querySelector('.ground')
+    const ground = document.querySelector('.ground-moving')
 
     let birdLeft = 220
     let birdBottom = 300
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             if (
                 obstacleLeft > 190 && obstacleLeft < 270 && birdLeft === 220 &&
-                (birdBottom < obstacleBottom + 300|| birdBottom > obstacleBottom + gap - 53) ||
+                (birdBottom < obstacleBottom + 300|| birdBottom > obstacleBottom + gap - 54) ||
                 birdBottom === 0
                 ) {
                 gameOver()
