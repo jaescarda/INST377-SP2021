@@ -1,44 +1,71 @@
-body {
-    background-color: rgb(224, 201, 185);
-}
-
 h1 {
-    display: flex;
-    justify-content: center;
-    color: rgb(70, 64, 47);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
 }
 
+body {
+  background: #d8c6c6;
+}
+
+
+/* start flexing */
 .flex-outer li,
 .flex-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+
 }
+
+.flex-outer {
+  padding-left: 20px;
+}
+
 
 .flex-outer > li > label,
 .flex-outer li p {
-  flex: 1 0 120px;
+  flex: 100px;
   max-width: 220px;
 }
- 
-.flex-outer > li > label + *,
-.flex-inner {
-  flex: 1 0 220px;
+
+.flex-outer > li > label + *, .flex-inner {
+  flex: 0 1 700px;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
+  align-items: center;
 }
 
-.flex-outer li button {
-    display: flex;
-    justify-content: center;
-    padding: 8px 16px;
-    border: none;
-    background: #333;
-    color: #f2f2f2;
-    text-transform: uppercase;
-    letter-spacing: .09em;
-    border-radius: 2px;
-  }
+
+p {
+  margin-top: 0;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+  align-items: left;
+}
+
+ul .flex-inner {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+
+}
+
+.flex-inner li {
+  width: 100px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
 
