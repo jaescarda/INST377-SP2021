@@ -6,37 +6,9 @@
 
 #mapid { height: 400px; }
 
-.columns {
-    padding: 30px;
-}
 
 input, label {
     display:block;
-}
-
-.flex-outer {
-    padding: 5px;
-}
-
-.flex-outer input{
-    width: 100%;
-}
-
-.search{
-    border: 1px solid rgb(121, 117, 117);
-    border-radius: 5px;
-    height: 30px;
-}
-
-.column {
-    width: 50%;
-  }
-
-button {
-    margin-top: 7px;
-    padding: 5px;
-    border: 1px solid gray;
-    border-radius: 3px;
 }
 
 ul {
