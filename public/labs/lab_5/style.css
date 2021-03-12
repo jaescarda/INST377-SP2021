@@ -1,0 +1,52 @@
+ h1 {
+    font-size: 30px;
+    font-family:'Open Sans', sans-serif;
+}
+
+#mapid { height: 400px; }
+
+.columns {
+    padding: 30px;
+}
+
+.flex-outer {
+    padding: 5px;
+}
+
+.flex-outer input{
+    width: 320px;
+}
+
+.column {
+    width: 50%;
+  }
+
+.button {
+    padding: 2px;
+}
+
+ul {
+    margin-top: 20px;
+}
+
+li {
+    height: 185px;
+    width: 430px;
+    margin: 40px;
+    padding:10px 12px;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    margin: -4px; 
+    margin-bottom: 30px; 
+}
+
+.name {
+    font-weight: bold;
+    font-size: 20px;
+}
+.address,.location,.zip {
+    font-style: italic;
+}
+span {
+    display: block;
+}
