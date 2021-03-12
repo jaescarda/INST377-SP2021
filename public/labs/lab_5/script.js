@@ -28,17 +28,21 @@ async function dataHandler(mapObjectFromFunction) {
     event.preventDefault();
     console.log("submit fired");
     const d = data.filter(
-       ((record) => record.zip.toUpperCase().includes(search.value.toUpperCase())))
+       ((record) => record.zip.toUpperCase().includes(search.value.toUpperCase()) && record.geocoded_column_1));
     const display = d.reduce((unique, o) => {
       if(!unique.some(obj => obj.address_line_1 === o.address_line_1 && obj.city === o.city && obj.state === o.state)) {
         unique.push(o);
-      } return unique;
+      } return unique.slice(0,5);
     },[]);
     while (targetList.firstChild) {
         targetList.removeChild(targetList.firstChild)
       };
     display.forEach((item) => {
         const appendItem = document.createElement("li");
+        const coord = item.geocoded_column_1;
+        const lat = coord.coordinates[1];
+        const long = coord.coordinates[0];
+        const marker = L.marker([lat, long]).addTo(mapObjectFromFunction);
         const html = display.map(place => {
           return (`
           <li>
@@ -48,11 +52,7 @@ async function dataHandler(mapObjectFromFunction) {
             <span class='zip'>${place.zip}</span>
           </li>
         `);
-        const coord = item.geocoded_column_1;
-        const lat = coord.coordinates[1];
-        const long = coord.coordinates[0];
-        mapObjectFromFunction.panTo([lat, long]);
-        const marker = L.marker([lat, long]).addTo(mapObjectFromFunction);
+ 
 })
     if (search.value.length === 0) {html.length = 0}
     else html.length = 5;
@@ -61,6 +61,10 @@ async function dataHandler(mapObjectFromFunction) {
     })
     console.log('here is display', display);
     console.table(display);
+
+    display.forEach((item) => {
+      mapObjectFromFunction.panTo([lat, long]);
+    })
 })
 }
 
