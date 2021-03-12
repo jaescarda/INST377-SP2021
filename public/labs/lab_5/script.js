@@ -43,7 +43,6 @@ async function dataHandler(mapObjectFromFunction) {
           return (`
           <li>
             <span class='name'>${place.name}</span> 
-            <span class='category'>${place.category}</span>
             <span class='address'>${place.address_line_1}</span>
             <span class='location'>${place.city}, ${place.state}</span>
             <span class='zip'>${place.zip}</span>
@@ -62,9 +61,8 @@ async function dataHandler(mapObjectFromFunction) {
       const coord = item.geocoded_column_1;
       const lat = coord.coordinates[1];
       const long = coord.coordinates[0];
-      const marker = L.marker([lat, long]).addTo(mymap);
       mapObjectFromFunction.panTo([lat, long]);
-
+      const marker = L.marker([lat, long]).addTo(mapObjectFromFunction);
     });
 })
 }

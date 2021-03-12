@@ -1,6 +1,7 @@
  h1 {
     font-size: 30px;
     font-family:'Open Sans', sans-serif;
+    font-weight: bold;
 }
 
 #mapid { height: 400px; }
@@ -9,20 +10,33 @@
     padding: 30px;
 }
 
+input, label {
+    display:block;
+}
+
 .flex-outer {
     padding: 5px;
 }
 
 .flex-outer input{
-    width: 320px;
+    width: 100%;
+}
+
+.search{
+    border: 1px solid rgb(121, 117, 117);
+    border-radius: 5px;
+    height: 30px;
 }
 
 .column {
     width: 50%;
   }
 
-.button {
-    padding: 2px;
+button {
+    margin-top: 7px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 3px;
 }
 
 ul {
@@ -30,14 +44,16 @@ ul {
 }
 
 li {
-    height: 185px;
-    width: 430px;
+    height: 100%;
+    width: 100%;
     margin: 40px;
     padding:10px 12px;
     justify-content: space-between;
-    background-color: cornflowerblue;
+    background-color: #BBCEA8; 
     margin: -4px; 
     margin-bottom: 30px; 
+    border: 2px cornflowerblue;
+    border-radius: 3px;
 }
 
 .name {
