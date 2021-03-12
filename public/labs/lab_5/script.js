@@ -48,6 +48,11 @@ async function dataHandler(mapObjectFromFunction) {
             <span class='zip'>${place.zip}</span>
           </li>
         `);
+        const coord = item.geocoded_column_1;
+        const lat = coord.coordinates[1];
+        const long = coord.coordinates[0];
+        mapObjectFromFunction.panTo([lat, long]);
+        const marker = L.marker([lat, long]).addTo(mapObjectFromFunction);
 })
     if (search.value.length === 0) {html.length = 0}
     else html.length = 5;
@@ -56,14 +61,6 @@ async function dataHandler(mapObjectFromFunction) {
     })
     console.log('here is display', display);
     console.table(display);
-
-    display.forEach((item) => {
-      const coord = item.geocoded_column_1;
-      const lat = coord.coordinates[1];
-      const long = coord.coordinates[0];
-      mapObjectFromFunction.panTo([lat, long]);
-      const marker = L.marker([lat, long]).addTo(mapObjectFromFunction);
-    });
 })
 }
 
